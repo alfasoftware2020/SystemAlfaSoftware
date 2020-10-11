@@ -9,7 +9,7 @@ namespace AlfaSoftware.Models
     public class ClientePJ 
     {
         [Key]
-        public int clientepjId { get; set; }
+        public int ClientePjId { get; set; }
         public string Cnpj { get; set; }
         public string NomeEmpresa { get; set; }
         

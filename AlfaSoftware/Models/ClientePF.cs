@@ -16,14 +16,14 @@ namespace AlfaSoftware.Models
         public string Email { get; set; }
         public string Profissao { get; set; }
         //Associação
-        public Conta conta { get; set; }
-        public Login login { get; set; }
+        public Conta Conta { get; set; }
+        public Login Login { get; set; }
         public Endereco Endereco { get; }
         /*FK 
         public ClientePJ ClientePJId { get; set; }*/
 
-        public ICollection<Investimentos> investimentos { get; set; } = new List<Investimentos>();
-        public ICollection<Transacao> transacao { get; set; } = new List<Transacao>();
+        public ICollection<Investimentos> Investimentos { get; set; } = new List<Investimentos>();
+        public ICollection<Transacao> Transacao { get; set; } = new List<Transacao>();
         public ClientePFModels() { }
 
         public ClientePFModels(int id, Endereco endereco, string nome, DateTime date, string cpf, string email, string profissao)

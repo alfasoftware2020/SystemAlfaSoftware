@@ -9,7 +9,7 @@ namespace AlfaSoftware.Models
     public class SaldoConta
     {
         
-        public int saldacontaId { get; set; }
+        public int SaldacontaId { get; set; }
         public SaldoConta() { }
     }
 }

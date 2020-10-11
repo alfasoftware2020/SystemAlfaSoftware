@@ -18,7 +18,7 @@ namespace AlfaSoftware.Models
 
         public CarteitraInvestimento() { }
 
-        public CarteitraInvestimento(int nrCarteira, int myProperty, string investir)
+        public CarteitraInvestimento(int nrCarteira, string investir)
         {
             
             NrCarteira = nrCarteira;

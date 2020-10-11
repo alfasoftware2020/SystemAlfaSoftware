@@ -18,7 +18,7 @@ namespace AlfaSoftware.Models
         public string Cidade { get; set; }
        /*FK
         public int ClientePFId { get; set; }*/
-        public ClientePFModels clientePFModels { get; set; }
+        public ClientePFModels ClientePFModels { get; set; }
         public Endereco() { 
         }
 

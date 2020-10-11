@@ -9,7 +9,7 @@ namespace AlfaSoftware.Models
     public class Login
     {
         [Key]
-        public int loginId { get; set; }
+        public int LoginId { get; set; }
         public string Senha { get; set; }
         public string LoginCliente { get; set; }
 
@@ -26,7 +26,7 @@ namespace AlfaSoftware.Models
         public Login(string senha, string loginCliente)
         {
             Senha = senha;
-            loginCliente = LoginCliente;
+            LoginCliente = loginCliente;
         }
     }
 }

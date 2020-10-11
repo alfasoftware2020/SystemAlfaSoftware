@@ -14,7 +14,7 @@ namespace AlfaSoftware.Controllers
     {
         private readonly AlfaSoftwareContext _context;
 
-        public ClientePFModelsController(AlfaSoftwareContext context)
+        public ClientePFModelsController(AlfaSoftwareContext context) //Construtor para injeção dependencia
         {
             _context = context;
         }
@@ -34,7 +34,7 @@ namespace AlfaSoftware.Controllers
             }
 
             var clientePFModels = await _context.ClientePFModels
-                .FirstOrDefaultAsync(m => m.clientepjId == id);
+                .FirstOrDefaultAsync(m => m.ClientePjId == id);
             if (clientePFModels == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace AlfaSoftware.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Date,Cpf,Email,Profissao,clientepjId,Cnpj,NomeEmpresa")] ClientePFModels clientePFModels)
         {
-            if (id != clientePFModels.clientepjId)
+            if (id != clientePFModels.ClientePjId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace AlfaSoftware.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ClientePFModelsExists(clientePFModels.clientepjId))
+                    if (!ClientePFModelsExists(clientePFModels.ClientePjId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace AlfaSoftware.Controllers
             }
 
             var clientePFModels = await _context.ClientePFModels
-                .FirstOrDefaultAsync(m => m.clientepjId == id);
+                .FirstOrDefaultAsync(m => m.ClientePjId == id);
             if (clientePFModels == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace AlfaSoftware.Controllers
 
         private bool ClientePFModelsExists(int id)
         {
-            return _context.ClientePFModels.Any(e => e.clientepjId == id);
+            return _context.ClientePFModels.Any(e => e.ClientePjId == id);
         }
     }
 }

@@ -13,8 +13,8 @@ namespace AlfaSoftware.Models
         public int InvestId { get; set; }
         public TipoInvestimento TipoInvestimento { get; set; }
         public int Quantidade { get; set; }
-        public ClientePFModels clientePf { get; set; }
-        public ClientePJ clientePj{ get; set; }
+        public ClientePFModels ClientePf { get; set; }
+        public ClientePJ ClientePj{ get; set; }
         
         /*
           FK
