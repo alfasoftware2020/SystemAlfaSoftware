@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Alfa Software</title>
+    <link href="" rel="stylesheet" type="text/css" />
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-darkly.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    <style type="text/css">
+        footer {
+            padding: 50px 0px 20px 0px;
+            position: relative;
+        }
+
+            footer .navbar-nav a:hover {
+                color: #9bf0e1;
+                text-decoration: none;
+            }
+
+
+
+            footer ul li {
+                float: right;
+                margin: 0 5px;
+                list-style: none;
+            }
+
+        .navbar-nav {
+            color: #9bf0e1;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Alfa Software</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="ClientePF" asp-action="Index">Carteira</a></li>
+                    <li><a asp-area="" asp-controller="CompraeVendas" asp-action="Index">Compra e Vendas</a></li>
+                    <li><a asp-area="" asp-controller="Transacoes" asp-action="Index">Transções</a></li>
+                    <li><a asp-area="" asp-controller="Relatorios" asp-action="Index">Relatórios</a></li>
+                </ul>
+                <div>
+                    <ul>
+                        <li class="navbar-collapse collapse navbar-right  class=" btn btn-success btn-sm""><a asp-area="" asp-controller="Login" asp-action="Entrar" class="btn btn-success btn-sm right">Entrar</a></li>
+
+                        <li class="navbar-collapse collapse navbar-right  class=" btn btn-success btn-sm""><a asp-area="" asp-controller="ClientePF" asp-action="Index" class="btn btn-success btn-sm right">Cadastrar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div>
+                <div>
+                    <ul class="navbar-nav">
+                        <li>&copy; 2020 - Alfa Software</li>
+                        <li><a asp-area="" asp-controller="Carteira" asp-action="Index">Carteira</a></li>
+                        <li><a asp-area="" asp-controller="Compra e Venda" asp-action="Index">Compra e Venda</a></li>
+                        <li><a asp-area="" asp-controller="Transações" asp-action="Index">Transações</a></li>
+                        <li><a asp-area="" asp-controller="Relatórios" asp-action="Index">Relatórios</a></li>
+                    </ul>
+
+
+                    <ul class="navbar-nav navbar-right">
+                        <li><a href=""><img src="imagens/facebook.png"></a></li>
+                        <li><a href=""><img src="imagens/twitter.png"></a></li>
+                        <li><a href=""><img src="imagens/instagram.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
