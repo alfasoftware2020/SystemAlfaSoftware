@@ -6,10 +6,21 @@ using System.Threading.Tasks;
 
 namespace AlfaSoftware.Models
 {
-    public class SaldoConta
+    public class SaldoConta 
     {
         
-        public int SaldacontaId { get; set; }
+        public double SaldocontaId{ get; set; }
+        public decimal Saldo { get; set; }
+        public Conta Conta { get; set; }
+        //FK
+        public int ContaId { get; set; }
         public SaldoConta() { }
+
+        public SaldoConta(double saldocontaId, decimal saldo, Conta conta)
+        {
+            SaldocontaId = saldocontaId;
+            Saldo = saldo;
+            Conta = conta;
+        }
     }
 }

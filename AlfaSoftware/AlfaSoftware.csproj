@@ -5,9 +5,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+    <Compile Remove="Views\Login\Css\**" />
+    <Compile Remove="wwwroot\Imagens\Imagem\**" />
+    <Content Remove="Views\Login\Css\**" />
+    <Content Remove="wwwroot\Imagens\Imagem\**" />
+    <EmbeddedResource Remove="Views\Login\Css\**" />
+    <EmbeddedResource Remove="wwwroot\Imagens\Imagem\**" />
+    <None Remove="Views\Login\Css\**" />
+    <None Remove="wwwroot\Imagens\Imagem\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Privacy.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

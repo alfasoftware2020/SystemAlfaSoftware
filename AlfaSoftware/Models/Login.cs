@@ -17,16 +17,16 @@ namespace AlfaSoftware.Models
         public int ClientePFId { get; set; }
         public int ClientePJId { get; set; }
         //Associação
-       
-       
-
+        public ClientePF ClientePF { get; set; }
 
         public Login() { }
 
-        public Login(string senha, string loginCliente)
+        public Login(int loginId, string senha, string loginCliente, ClientePF clientePF)
         {
+            LoginId = loginId;
             Senha = senha;
             LoginCliente = loginCliente;
+            ClientePF = clientePF;
         }
     }
 }

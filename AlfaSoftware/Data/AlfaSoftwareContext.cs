@@ -14,6 +14,6 @@ namespace AlfaSoftware.Data
         {
         }
 
-        public DbSet<AlfaSoftware.Models.ClientePFModels> ClientePFModels { get; set; }
+        public DbSet<AlfaSoftware.Models.ClientePF> ClientePF { get; set; }
     }
 }

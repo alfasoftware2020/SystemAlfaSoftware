@@ -7,28 +7,47 @@ using System.Threading.Tasks;
 
 namespace AlfaSoftware.Models
 {
-    public class Investimentos
+    public class Investimentos : TipoInvestimento
     {
-        [Key]
-        public int InvestId { get; set; }
-        public TipoInvestimento TipoInvestimento { get; set; }
-        public int Quantidade { get; set; }
-        public ClientePFModels ClientePf { get; set; }
-        public ClientePJ ClientePj{ get; set; }
-        
-        /*
-          FK
-          public int ClientePFId { get; set; }*/
 
+        public int InvestId { get; set; }
+        public int Quantidade { get; set; }
+        //FK
+        public int ClientePFId { get; set; }
+        public int TransacaoId { get; set; }
+        //Associação
+        public ClientePF ClientePF { get; set; }
+        //public ClientesPF ClientesPF { get; set; }
+        public TipoInvestimento TipoInvestimento { get; set; }
         public decimal ValorInvestimento { get; set; }
+
 
         public Investimentos() { }
 
-        public Investimentos(int quantidade, decimal valorInvestimento)
+        public Investimentos(ClientePF clientePF, int tpId, string modInvestimento, int nmInvestimento, int investId, int quantidade, ClientePF clientesPF, TipoInvestimento tipoInvestimento, decimal valorInvestimento)
+            : base ( tpId, modInvestimento, nmInvestimento)
+
         {
+            InvestId = investId;
             Quantidade = quantidade;
+            TipoInvestimento = tipoInvestimento;
             ValorInvestimento = valorInvestimento;
+            ClientePF = clientePF;
         }
+
+
+
+
+       /* public void AddClientesPF(ClientesPF clientesPF) //Esse metodo faz com que adicione um investimento ao cliente 
+        {
+            ClientesPF.Add(clientesPF);
+        }
+
+        public void RemoveInvestimentos(ClientesPF clientesPF)// Esse 
+        {
+            ClientesPF.Remove(clientesPF);
+        }*/
+
     }
 
 }

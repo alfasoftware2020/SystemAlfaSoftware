@@ -1,74 +1,29 @@
-﻿@{
-    ViewData["Title"] = "System Bank Unipim ";
-}
-<style type="text/css">
-    #lateral {
-        width: 180px;
-        float: left;
-    }
-    
-    #lateral ul a:hover{
-        padding-left: 20px;
-        
-    }
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap-reboot.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+          asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-darkly.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <style href="" type="text/css">
 
-    #lateral ul a {
-        font-size: 0.9em;
-        padding: 3px;
-        display: block;
-        line-height: 30px;
-        text-decoration: none;
-        border-bottom: 1px solid #f3f3f3;
-    }
-
-    .caixa-conteudo {
-        padding: 5px;
-        margin-top: 5px;
-    }
-
-    #conteudo {
-        margin-top: 60px;
-    }
-
-    .caixa {
-        margin: 10px 0;
-        padding: 5px;
-    }
-
-    h2 {
-        font-size: 1em;
-        background: #294c71;
-        color: #fff;
-        padding: 5px;
-    }
-</style>
-<div class="text-center">
-    <h1 class="display-4"> System Bank Unipim </h1>
-    <div id="lateral">
-        <div class="caixa">
-            <h2>Conteudos:</h2>
-            <div class="caixa-conteudo">
-                <ul>
-                    <li> <a href=""> Home</a> </li>
-                    <li> <a asp-area="" asp-controller="ClientePF" asp-action="Index">Carteira</a> </li>
-                    <li> <a href=""> Compra e Vendas</a> </li>
-                    <li> <a href=""> Transações</a> </li>
-                    <li> <a href="">Relatórios</a> </li>
-                </ul>
-            </div>
-        </div>
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Let's call it a draw(ing surface)</h2>
+        <h2>Diving in</h2>
+        <h2>Simple shapes</h2>
+        <h2>Canvas coordinates</h2>
+        <h3>Canvas coordinates diagram</h3>
+        <h2>Paths</h2>
+        <textarea id="TextArea1" rows="2" cols="20"></textarea>
+        <input id="Button1" type="button" value="button" />
     </div>
-    <div class="container">
-        <!-- Div: Descrição sobre o negocio -->
-        <div>
-            <h2>Destaque</h2>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed gravida elit. Integer vitae dui sed mauris consectetur varius. Suspendisse nibh turpis, egestas ac volutpat sit amet, condimentum ac libero. Aliquam tincidunt eu risus in dictum. Ut a urna eu metus tristique iaculis vel nec urna. Praesent sit amet congue risus, non hendrerit ex. Ut accumsan odio augue, in ultricies lacus tempor ut. Donec vestibulum, velit at convallis consequat, lorem risus placerat nisi, eu egestas magna nulla non justo. Phasellus ullamcorper libero ac fermentum gravida. Duis hendrerit imperdiet arcu, quis cursus dui suscipit sed. Nam ut gravida turpis, eget iaculis diam. Nulla accumsan, lectus vitae vestibulum molestie, nulla tellus vulputate ex, viverra molestie ligula odio vitae libero. Duis dignissim placerat tellus sit amet suscipit.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed gravida elit. Integer vitae dui sed mauris consectetur varius. Suspendisse nibh turpis, egestas ac volutpat sit amet, condimentum ac libero. Aliquam tincidunt eu risus in dictum. Ut a urna eu metus tristique iaculis vel nec urna. Praesent sit amet congue risus, non hendrerit ex. Ut accumsan odio augue, in ultricies lacus tempor ut. Donec vestibulum, velit at convallis consequat, lorem risus placerat nisi, eu egestas magna nulla non justo. Phasellus ullamcorper libero ac fermentum gravida. Duis hendrerit imperdiet arcu, quis cursus dui suscipit sed. Nam ut gravida turpis, eget iaculis diam. Nulla accumsan, lectus vitae vestibulum molestie, nulla tellus vulputate ex, viverra molestie ligula odio vitae libero. Duis dignissim placerat tellus sit amet suscipit.
-            </p>
-        </div>
-    </div>
-</div>
+</body>
+</html>

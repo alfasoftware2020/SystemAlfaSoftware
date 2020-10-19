@@ -1,12 +1,33 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<h4>Seja Bem Vindo(a)!</h4>
-<h3>Acesse Sua Conta:</h3>
-<p>Digite seu CPF/CNPJ:</p>
-<input id="Text1" type="text" />
-<p>Digite sua SENHA:</p>
-<input id="Password" type="password" />
-<input id="Button1" type="button" value="Entrar" />
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"] - Login</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap-reboot.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+          asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-darkly.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+</head>
+<body>
+    <header>
+        <div>
+            <div id="login">
+                <h3> Seja Bem Vindo(a)!</h3>
+                <h4> Acesse Sua Conta:</h4>
+                <p> Digite seu CPF/CNPJ:</p>
+                <p> Digite sua SENHA:</p>
+                <input id="Password" type="password">
+                <br />
+                <a href="" class="btn-dark">
+                    Vamos lá!
+                </a>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+

@@ -12,6 +12,10 @@ using Microsoft.EntityFrameworkCore;
 using AlfaSoftware.Data;
 
 
+
+
+
+
 namespace AlfaSoftware
 {
     public class Startup
@@ -30,6 +34,10 @@ namespace AlfaSoftware
 
             services.AddDbContext<AlfaSoftwareContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("AlfaSoftwareContext")));
+
+           /* services.AddDbContext<AlfaSoftwareContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("AlfaSoftwareContext")));*/
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

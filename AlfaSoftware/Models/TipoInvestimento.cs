@@ -9,18 +9,24 @@ namespace AlfaSoftware.Models.ViewModels
 {
     public class TipoInvestimento 
     {
-        [Key]
+       [Key]
         public int TpId { get; set; }
         public string ModInvestimento { get; set; }
         public int NmInvestimento { get; set; }
-        /*FK
-        public int InvestimentosId { get; set; }*/
+
+        //Fk 
+        public int Investimento { get; set; }
+
+
+
         public TipoInvestimento() { }
 
-        public TipoInvestimento(string modInvestimento, int nmInvestimento)
-        {  
+        public TipoInvestimento(int tpId, string modInvestimento, int nmInvestimento)
+        {
+            TpId = tpId;
             ModInvestimento = modInvestimento;
             NmInvestimento = nmInvestimento;
+            
         }
     }
 

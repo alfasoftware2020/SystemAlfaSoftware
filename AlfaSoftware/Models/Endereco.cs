@@ -16,19 +16,25 @@ namespace AlfaSoftware.Models
         public string Complemento { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
-       /*FK
-        public int ClientePFId { get; set; }*/
-        public ClientePFModels ClientePFModels { get; set; }
+
+        //FK
+        public int ClientePFId { get; set; }
+
+        //Associação
+        public ClientePF ClientePF { get; set; }
+        
         public Endereco() { 
         }
 
-        public Endereco(string cep, string rua, string complemento, string bairro, string cidade)  {
-                       
+        public Endereco(int endId, string cep, string rua, string complemento, string bairro, string cidade, ClientePF clientePF)
+        {
+            EndId = endId;
             Cep = cep;
             Rua = rua;
             Complemento = complemento;
             Bairro = bairro;
             Cidade = cidade;
+            ClientePF = clientePF;
         }
     }
 }

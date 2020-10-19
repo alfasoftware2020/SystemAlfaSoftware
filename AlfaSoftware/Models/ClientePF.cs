@@ -2,40 +2,63 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 namespace AlfaSoftware.Models
 {
-    public class ClientePFModels : ClientePJ
+    [Table("TB_ClientePF")]
+    public class ClientePF 
     {
         public int Id { get; set; }
         
         public string Nome { get; set; }
-        public DateTime Date { get; set; }
         public string Cpf { get; set; }
+        public int Telefone { get; set; }
         public string Email { get; set; }
-        public string Profissao { get; set; }
-        //Associação
-        public Conta Conta { get; set; }
-        public Login Login { get; set; }
-        public Endereco Endereco { get; }
-        /*FK 
-        public ClientePJ ClientePJId { get; set; }*/
+        public Status Status { get; set; }
+        public DateTime Data { get; set; }
 
-        public ICollection<Investimentos> Investimentos { get; set; } = new List<Investimentos>();
+        //FK
+        public int LoginId { get; set; }
+        public ICollection<Investimentos> Investimento { get; set; } = new List<Investimentos>();
         public ICollection<Transacao> Transacao { get; set; } = new List<Transacao>();
-        public ClientePFModels() { }
+        
+        public ClientePF() { }
 
-        public ClientePFModels(int id, Endereco endereco, string nome, DateTime date, string cpf, string email, string profissao)
+        public ClientePF(int id, string nome, string email, int telefone, Status status, DateTime data)
         {
             Id = id;
-            Endereco = endereco;
             Nome = nome;
-            Date = date;
-            Cpf = cpf;
             Email = email;
-            Profissao = profissao;
-            
+            Telefone = telefone;
+            Status = status;
+            Data = data;
         }
+
+        public void AddInvestimento(Investimentos investimentos) //Esse metodo faz com que adicione um investimento ao cliente 
+        {
+            Investimento.Add(investimentos);
+        }
+        
+        public void RemoveInvestimentos(Investimentos investimentos)// Esse 
+        {
+            Investimento.Remove(investimentos);
+        }
+        public void AddTransacao(Transacao transacao) //Esse metodo faz com que adicione um investimento ao cliente 
+        {
+            Transacao.Add(transacao);
+        }
+
+        public void RemoveTransacao(Transacao transacao)// Esse 
+        {
+            Transacao.Remove(transacao);
+        }
+        /*public double TotalIvestimentos(DateTime initial, DateTime final) //Vai retornar o total investido
+        {
+            return Sales.Where(sr => sr.Date >= initial && sr.Date <= final).Sum(sr => sr.Amount);
+        }*/
+
+
     }
 }

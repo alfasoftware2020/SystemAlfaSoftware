@@ -12,13 +12,19 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/*MINHAS CONFIGURAÇÕES*/
+
+
+
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
+    margin: 0;
+    
 }
 article,
 aside,
@@ -2512,7 +2518,7 @@ label {
 input[type="search"] {
   box-sizing: border-box;
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
 }
 input[type="radio"],
 input[type="checkbox"] {
@@ -5775,7 +5781,7 @@ button.close {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
 }
 .modal-open {
   overflow: hidden;
